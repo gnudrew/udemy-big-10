@@ -55,7 +55,10 @@ elif len(results) == 1:
 else:
     print("This word not found!")
 
+    # # 11/6/2019, ASR
+    # # HEre was my attempt at using get_close_matches methods using SQL database queries. It was slow and not quite working yet.
     # # look for close matches, just on lowercase for now
+    
     # cursor.reset()
     # cursor.execute("SELECT * FROM Dictionary")
     # full_table = cursor.fetchall()
