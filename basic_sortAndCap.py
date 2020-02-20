@@ -1,6 +1,7 @@
  
 
 def sortAndCap(*args):
+# assume *args are all strings. 
     newList = []
     length = len(args)
 
@@ -22,3 +23,11 @@ def sortAndCap(*args):
     return newList
 
 print(sortAndCap("Zedd", "Corbin", "Andrew", "Peter", "Gregg", "Puff"))
+# print(sortAndCap(1, 3, 2))
+
+# testList = input("Type a few comma-separated strings to sort and capitalize: ")
+# testList = [
+#     str(i) 
+#     for i in testList
+# ]
+# print(sortAndCap(testList))

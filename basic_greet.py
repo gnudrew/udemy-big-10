@@ -3,5 +3,5 @@ def sayHi(username):
     msg = f"Hi {username}"
     return msg
 
-inp = str(input("Enger your username:"))
+inp = str(input("Enter your username:"))
 print(sayHi(inp))
