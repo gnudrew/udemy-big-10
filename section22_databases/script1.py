@@ -36,6 +36,18 @@ def update(quantity, price, item,):
     conn.commit()
     conn.close()
 
+# create table
+create_table()
+
+# insert some entries
+insert("water jug",7,8.5)
+insert("coffee cup",8,3)
+insert("wine glass", 1,11.5)
+print(view())
+
 # delete("Wine Glass")
+delete("wine glass")
+
+# Update coffee cup
 update(11,5.25,"Coffee Cup")
 print(view())
