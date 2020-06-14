@@ -45,7 +45,7 @@ def update(id,title,author,year,isbn):
     conn.close()
    
 
-connect()
-insert("The Sun","John Smith",1918,9819681651)
-insert("The Moon","Peter Wiggin", 2020, 4654968434)
-view()
+# connect()
+# insert("The Sun","John Smith",1918,9819681651)
+# insert("The Moon","Peter Wiggin", 2020, 4654968434)
+# view()
