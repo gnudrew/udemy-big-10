@@ -13,6 +13,7 @@ Quit
 """
 
 from tkinter import *
+from tkinter import ttk
 import backend
 
 def get_selected_row(event):
@@ -56,6 +57,8 @@ def update_command():
 window = Tk()
 window.wm_title("Bookstore")
 # window.geometry('500x500')
+ttk.Style().configure("TButton", padding=6, relief="flat",
+   background="green")
 
 l1=Label(window,text="Title")
 l1.grid(row=0,column=0)
