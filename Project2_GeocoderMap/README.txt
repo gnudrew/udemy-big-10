@@ -1,0 +1,1 @@
+This app utilizes Python: Pandas, <mapStuff> frameworks to create multi-layer interactive map with database-sourced labels.
