@@ -3,6 +3,10 @@
         name: "login_screen"
     SignUpScreen:
         name: "sign_up_screen"
+    SignUpScreenSuccess:
+        name: "sign_up_screen_success"
+    LoginScreenSuccess:
+        name: "login_screen_success"
     # ForgotPwScreen:
     #     name: "forgot_pw_screen"
 
@@ -19,6 +23,7 @@
                 hint_text: "Password"
             Button:
                 text: "Login"
+                on_press: root.login(root.ids.username.text, root.ids.password.text)
         GridLayout:
             cols: 2
             Button:
@@ -41,3 +46,27 @@
         Button:
             text: "Submit"
             on_press: root.add_user(root.ids.username.text, root.ids.password.text)
+
+<SignUpScreenSuccess>:
+    GridLayout:
+        cols: 1
+        Label:
+            text: "Sign up successful!"
+        Button:
+            text: "Login Page"
+            on_press: root.go_LoginScreen()
+
+<LoginScreenSuccess>:
+    GridLayout:
+        cols: 1
+        Button:
+            text: "Logout"
+            on_press: log_out()
+        Label:
+            text: "How do you feel?"
+        TextInput:
+            hint_text: "Things to try: happy, sad, unloved..."
+        Button:
+            text: "Enlighten me"
+        Label:
+            text: ""

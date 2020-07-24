@@ -8,7 +8,10 @@ Builder.load_file('design.kv')
 
 class LoginScreen(Screen):
     def sign_up(self):
+        self.manager.transition.direction = "right"
         self.manager.current = "sign_up_screen"
+    def login(self):
+        pass
 
 class SignUpScreen(Screen):
     def add_user(self, username, password):
@@ -18,6 +21,18 @@ class SignUpScreen(Screen):
             'created' : datetime.now().strftime("%Y-%m-%d %H-%M-%S")}
         with open("users.json", 'w') as file:
             json.dump(users, file)
+        self.manager.current = "sign_up_screen_success"
+
+class SignUpScreenSuccess(Screen):
+    def go_LoginScreen(self):
+
+        self.manager.transition.direction = "right"
+        self.manager.current = "login_screen"
+
+class LoginScreenSuccess(Screen):
+    def log_out(self):
+        self.manager.transition.direction = "right"
+        self.manager.current = "login_screen"
 
 class RootWidget(ScreenManager):
     pass
