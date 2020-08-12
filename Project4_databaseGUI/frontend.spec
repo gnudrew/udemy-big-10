@@ -4,7 +4,7 @@ block_cipher = None
 
 
 a = Analysis(['frontend.py'],
-             pathex=['C:\\GitHub\\udemy-big-10\\Project5_databaseGUI'],
+             pathex=['C:\\GitHub\\udemy-big-10\\Project4_databaseGUI'],
              binaries=[],
              datas=[],
              hiddenimports=[],
