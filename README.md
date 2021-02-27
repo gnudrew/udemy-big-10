@@ -1,2 +1,5 @@
 # udemy-big-10
-following along Udemy course, and creating my first 10 projects! :D
+Following along Udemy course:
+* do homework problems 
+* build 10 projects
+* make some templates
