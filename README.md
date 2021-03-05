@@ -2,6 +2,6 @@
 Sandbox for self-directed learning based on Udemy course "Python: Big 10". My activities here will include:
 * Watch lectures
 * Do homework problems in "sections"
-* Write follow-along code for design of several apps in "projects"
-* Tinker with app designs to modify functionality
-* Make some useful templates for future ideas
+* Follow along step-by-step code design of applications in "projects"
+* Tinker to modify functionality of the apps
+* Make some templates for future ideas
