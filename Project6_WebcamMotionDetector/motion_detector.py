@@ -1,10 +1,11 @@
 import cv2, time
 from datetime import datetime
+import pandas
 
 video=cv2.VideoCapture(0)
 
 first_frame=None
-status_list=[]
+status_list=[None, None]
 times=[]
 
 while True:
@@ -14,7 +15,7 @@ while True:
     gray2=cv2.GaussianBlur(gray,(21,21),0)
 
     if first_frame is None:
-        first_frame=gray
+        first_frame=gray2
         continue
     
     delta_frame=cv2.absdiff(first_frame,gray2)
@@ -50,13 +51,17 @@ while True:
     # print(delta_frame)
 
     if key==ord('q'):
+        if status == 1:
+            times.append(datetime.now())
         break
 
-    print(status)
-    # datetime.now()
+# Save times data to .csv WITHOUT Pandas
 
-print(status_list)
-print(times)
+
+for i in range(0,len(times),2):
+
+# Save times data to .csv WITH Pandas
+
 
 video.release()
 cv2.destroyAllWindows()
