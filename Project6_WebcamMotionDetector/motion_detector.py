@@ -56,9 +56,15 @@ while True:
         break
 
 # Save times data to .csv WITHOUT Pandas
-
+f = open("times.csv", "w")
+f.write("Enter, Exit\n")
 
 for i in range(0,len(times),2):
+    f.write(str(times[i])+", "+str(times[i+1])+"\n")
+
+f.close()
+f = open("times.csv", "r")
+print(f.read())
 
 # Save times data to .csv WITH Pandas
 
