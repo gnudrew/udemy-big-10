@@ -55,19 +55,29 @@ while True:
             times.append(datetime.now())
         break
 
-# Save times data to .csv WITHOUT Pandas
-f = open("times.csv", "w")
-f.write("Enter, Exit\n")
+write_using_pandas = True
+if write_using_pandas == False:
+    # Save times data to .csv WITHOUT Pandas
+    f = open("times.csv", "w")
+    f.write("Enter, Exit\n")
 
-for i in range(0,len(times),2):
-    f.write(str(times[i])+", "+str(times[i+1])+"\n")
+    for i in range(0,len(times),2):
+        f.write(str(times[i])+", "+str(times[i+1])+"\n")
 
-f.close()
-f = open("times.csv", "r")
-print(f.read())
+    f.close()
 
-# Save times data to .csv WITH Pandas
+elif write_using_pandas == True:
+    # Save times data to .csv WITH Pandas
+    df = pandas.DataFrame(columns=["Enter", "Exit"])
 
+    for i in range(0,len(times),2):
+        df = df.append({"Enter": times[i],"Exit": times[i+1]}, ignore_index=True)
+
+    df.to_csv("times.csv")
+
+# print(status_list,"\n")
+# print(times,"\n")
+# print(df,"\n")
 
 video.release()
 cv2.destroyAllWindows()
